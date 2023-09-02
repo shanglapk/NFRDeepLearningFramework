@@ -166,3 +166,79 @@ oss, accuracy = model.evaluate(X_train, Y_train, verbose=False)
 print("Training Accuracy: {:.4f}".format(accuracy))
 loss, accuracy = model.evaluate(X_test, Y_test, verbose=False)
 print("Testing Accuracy:  {:.4f}".format(accuracy))
+##################################################################################################################################
+DReqANN Model and Training Process
+###################################################################################################################################
+Shape of label tensor: (914, 5)
+Model: "sequential_18"
+_________________________________________________________________
+Layer (type) Output Shape Param # 
+=================================================================
+dense_77 (Dense) (None, 2128) 4496464 
+ 
+dropout_59 (Dropout) (None, 2128) 0 
+dense_78 (Dense) (None, 256) 545024 
+dropout_60 (Dropout) (None, 256) 0 
+dense_79 (Dense) (None, 128) 32896 
+dropout_61 (Dropout) (None, 128) 0 
+dense_80 (Dense) (None, 5) 645 
+=================================================================
+Total params: 5,075,029
+Trainable params: 5,075,029
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/100
+23/23 - 2s - loss: 1.5489 - accuracy: 0.3625 - val_loss: 1.4664 - val_accuracy: 0.
+3880 - lr: 0.0010 - 2s/epoch - 97ms/step
+Epoch 2/100
+23/23 - 2s - loss: 1.4323 - accuracy: 0.3844 - val_loss: 1.3579 - val_accuracy: 0.
+3880 - lr: 0.0010 - 2s/epoch - 68ms/step
+Epoch 3/100
+23/23 - 2s - loss: 1.2362 - accuracy: 0.4405 - val_loss: 1.1659 - val_accuracy: 0.
+4918 - lr: 0.0010 - 2s/epoch - 80ms/step
+Epoch 4/100
+23/23 - 2s - loss: 1.0301 - accuracy: 0.5417 - val_loss: 1.0247 - val_accuracy: 0.
+6885 - lr: 0.0010 - 2s/epoch - 70ms/step
+Epoch 5/100
+23/23 - 2s - loss: 0.8003 - accuracy: 0.7031 - val_loss: 0.8631 - val_accuracy: 0.
+7705 - lr: 0.0010 - 2s/epoch - 67ms/step
+Epoch 6/100
+23/23 - 2s - loss: 0.5641 - accuracy: 0.8181 - val_loss: 0.7053 - val_accuracy: 0.
+8142 - lr: 0.0010 - 2s/epoch - 67ms/step
+Epoch 7/100
+23/23 - 2s - loss: 0.3923 - accuracy: 0.8687 - val_loss: 0.6266 - val_accuracy: 0.
+8306 - lr: 0.0010 - 2s/epoch - 71ms/step
+Epoch 8/100
+23/23 - 2s - loss: 0.2856 - accuracy: 0.9248 - val_loss: 0.6437 - val_accuracy: 0.
+8470 - lr: 0.0010 - 2s/epoch - 67ms/step
+Epoch 9/100
+23/23 - 2s - loss: 0.2058 - accuracy: 0.9439 - val_loss: 0.6564 - val_accuracy: 0.
+8525 - lr: 0.0010 - 2s/epoch - 67ms/step
+Epoch 10/100
+23/23 - 2s - loss: 0.1561 - accuracy: 0.9576 - val_loss: 0.6981 - val_accuracy: 0.
+8470 - lr: 0.0010 - 2s/epoch - 68ms/step
+Epoch 11/100
+23/23 - 1s - loss: 0.1230 - accuracy: 0.9672 - val_loss: 0.6877 - val_accuracy: 0.
+8579 - lr: 0.0010 - 1s/epoch - 65ms/step
+Epoch 12/100
+Epoch 12: ReduceLROnPlateau reducing learning rate to 0.00010000000474974513.
+23/23 - 2s - loss: 0.0991 - accuracy: 0.9726 - val_loss: 0.7155 - val_accuracy: 0.
+8634 - lr: 0.0010 - 2s/epoch - 72ms/step
+Epoch 13/100
+23/23 - 1s - loss: 0.1010 - accuracy: 0.9672 - val_loss: 0.7175 - val_accuracy: 0.
+8689 - lr: 1.0000e-04 - 1s/epoch - 63ms/step
+Epoch 14/100
+23/23 - 1s - loss: 0.0882 - accuracy: 0.9699 - val_loss: 0.7218 - val_accuracy: 0.
+8634 - lr: 1.0000e-04 - 1s/epoch - 65ms/step
+Epoch 15/100
+23/23 - 2s - loss: 0.0906 - accuracy: 0.9822 - val_loss: 0.7295 - val_accuracy: 0.
+8634 - lr: 1.0000e-04 - 2s/epoch - 68ms/step
+Epoch 16/100
+23/23 - 2s - loss: 0.0954 - accuracy: 0.9767 - val_loss: 0.7403 - val_accuracy: 0.
+8689 - lr: 1.0000e-04 - 2s/epoch - 80ms/step
+Epoch 17/100
+Epoch 17: ReduceLROnPlateau reducing learning rate to 1.0000000474974514e-05.
+23/23 - 2s - loss: 0.0771 - accuracy: 0.9740 - val_loss: 0.7494 - val_accuracy: 0.
+8634 - lr: 1.0000e-04 - 2s/epoch - 75ms/step
+
