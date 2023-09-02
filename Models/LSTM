@@ -67,3 +67,85 @@ print(score)
 from sklearn.metrics import classification_report
 target_names = ['Maintainability', 'Operability', 'Performance','Security','Usabili
 print(classification_report(Y_test, y_pred, target_names=target_names))
+#############################################################################################################################################
+LSTM Model, Input/output and Training Process
+##############################################################################################################################################
+0                       refresh display every 60 seconds
+1                respond fast keep uptodate data display
+2                 produce search results acceptable time
+3      search results returned later 30 seconds user ...
+4                    generate cma report acceptable time
+                             ...                        
+909    control open connections database database acc...
+910    use applicable medical data code sets describe...
+911    use nonmedical data code sets described implem...
+912    volumes 1 2 version 4010 may 2000 washington p...
+913    provide ability capture clinical data elements...
+Name: sentence, Length: 914, dtype: object
+[[669 116 168 ...   0   0   0]
+ [670 242 853 ...   0   0   0]
+ [855  77 322 ...   0   0   0]
+ ...
+ [ 11   1   2 ...   0   0   0]
+ [150  15  19 ...   0   0   0]
+ [ 29  37 320 ...   0   0   0]]
+Shape of label tensor: (914, 5)
+Model: "sequential_9"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_9 (Embedding)     (None, 65, 50)            106450    
+                                                                 
+ bidirectional_9 (Bidirectio  (None, 65, 100)          40400     
+ nal)                                                            
+                                                                 
+ flatten_9 (Flatten)         (None, 6500)              0         
+                                                                 
+ dense_9 (Dense)             (None, 5)                 32505     
+                                                                 
+=================================================================
+Total params: 179,355
+Trainable params: 179,355
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+74/74 - 34s - loss: 1.4687 - accuracy: 0.4049 - val_loss: 1.1640 - val_accuracy: 0.5902 - 34s/epoch - 462ms/step
+Epoch 2/20
+74/74 - 27s - loss: 0.8797 - accuracy: 0.6799 - val_loss: 0.8000 - val_accuracy: 0.7596 - 27s/epoch - 368ms/step
+Epoch 3/20
+74/74 - 27s - loss: 0.4248 - accuracy: 0.8865 - val_loss: 0.7704 - val_accuracy: 0.8087 - 27s/epoch - 360ms/step
+Epoch 4/20
+74/74 - 25s - loss: 0.2444 - accuracy: 0.9480 - val_loss: 0.9428 - val_accuracy: 0.7869 - 25s/epoch - 340ms/step
+Epoch 5/20
+74/74 - 29s - loss: 0.1502 - accuracy: 0.9672 - val_loss: 0.9125 - val_accuracy: 0.7923 - 29s/epoch - 392ms/step
+Epoch 6/20
+74/74 - 29s - loss: 0.1050 - accuracy: 0.9754 - val_loss: 0.8635 - val_accuracy: 0.8142 - 29s/epoch - 398ms/step
+Epoch 7/20
+74/74 - 30s - loss: 0.0655 - accuracy: 0.9795 - val_loss: 0.9022 - val_accuracy: 0.8033 - 30s/epoch - 405ms/step
+Epoch 8/20
+74/74 - 29s - loss: 0.0584 - accuracy: 0.9863 - val_loss: 0.9322 - val_accuracy: 0.8087 - 29s/epoch - 396ms/step
+Epoch 9/20
+74/74 - 33s - loss: 0.0550 - accuracy: 0.9836 - val_loss: 0.9251 - val_accuracy: 0.8142 - 33s/epoch - 444ms/step
+Epoch 10/20
+74/74 - 25s - loss: 0.0314 - accuracy: 0.9932 - val_loss: 0.9634 - val_accuracy: 0.8087 - 25s/epoch - 343ms/step
+Epoch 11/20
+74/74 - 22s - loss: 0.0284 - accuracy: 0.9932 - val_loss: 0.9993 - val_accuracy: 0.8087 - 22s/epoch - 301ms/step
+Epoch 12/20
+74/74 - 22s - loss: 0.0266 - accuracy: 0.9932 - val_loss: 1.0459 - val_accuracy: 0.8087 - 22s/epoch - 302ms/step
+Epoch 13/20
+74/74 - 22s - loss: 0.0277 - accuracy: 0.9932 - val_loss: 1.0774 - val_accuracy: 0.8033 - 22s/epoch - 294ms/step
+Epoch 14/20
+74/74 - 24s - loss: 0.0240 - accuracy: 0.9932 - val_loss: 1.0697 - val_accuracy: 0.8087 - 24s/epoch - 326ms/step
+Epoch 15/20
+74/74 - 29s - loss: 0.0176 - accuracy: 0.9932 - val_loss: 1.1234 - val_accuracy: 0.8087 - 29s/epoch - 399ms/step
+Epoch 16/20
+74/74 - 28s - loss: 0.0239 - accuracy: 0.9918 - val_loss: 1.1502 - val_accuracy: 0.8087 - 28s/epoch - 384ms/step
+Epoch 17/20
+74/74 - 20s - loss: 0.0192 - accuracy: 0.9918 - val_loss: 1.1585 - val_accuracy: 0.8033 - 20s/epoch - 270ms/step
+Epoch 18/20
+74/74 - 20s - loss: 0.0147 - accuracy: 0.9945 - val_loss: 1.1709 - val_accuracy: 0.8087 - 20s/epoch - 272ms/step
+Epoch 19/20
+74/74 - 22s - loss: 0.0180 - accuracy: 0.9932 - val_loss: 1.1764 - val_accuracy: 0.8033 - 22s/epoch - 292ms/step
+Epoch 20/20
+74/74 - 21s - loss: 0.0223 - accuracy: 0.9904 - val_loss: 1.1606 - val_accuracy: 0.8033 - 21s/epoch - 284ms/step
