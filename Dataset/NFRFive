@@ -358,7 +358,7 @@ Security	If not using portal and want to allow users to access over the internet
 Security	If want to give access to the patient portals over the internet, then consider using a client-sided certificate to only allow users access to the main OpenEMR login page
 Security	If you are using XAMPP, note that this software is extremely unsecure after installation and you need to secure it (See the XAMPP security instructions to secure your XAMPP installation.)
 Security	On server, consider only opening port 443 (https).
-Security	Only allow https (ie turn off http)
+Security	Only allow https (ie turn off http).
 Security	Only allowing the IP address of the third party portal to access the SOAP APIs (for patient access)
 Security	Passwords should be held to a standard and be required to change at intervals.
 Security	The third party portal could also set up a ssh tunnel method, so the local OpenEMR instance is not open to the web (and possibly not even require an IP address).
